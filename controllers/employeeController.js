@@ -5,7 +5,7 @@ const Employee = mongoose.model('Employee');
 
 router.get('/', (req, res) => {
     res.render("employee/addOrEdit", {
-        viewTitle: "Drag and Drop Form"
+        viewTitle: "Submit your idea and we'll break it down"
     });
 });
 
@@ -18,15 +18,8 @@ router.post('/', (req, res) => {
 
 function insertRecord(req,res){
   var employee = new Employee();
-  employee.firstName = req.body.firstName;
-  employee.lastName = req.body.lastName;
-  employee.year = req.body.year;
-  employee.title = req.body.title;
-  employee.place = req.body.place;
-  employee.publisher = req.body.publisher;
-  employee.volume = req.body.volume;
-  employee.issue = req.body.issue;
-  employee.pages = req.body.pages;
+  employee.Bad_Idea1 = req.body.Bad_Idea1;
+  employee.Genre = req.body.Genre;
   employee.save((err, doc) => {
     if (!err)
     res.redirect('employee/list');

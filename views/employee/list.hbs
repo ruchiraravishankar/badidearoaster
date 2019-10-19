@@ -83,29 +83,21 @@ crossorigin="anonymous">
 <body class="bodybg">
   <div class="example">
     <div class="top">
-      <br><h3>Harvard Format</h3><br>
+      <br><h3>All Ideas</h3><br>
     </div>
       <div style="margin:auto ;width:700px">
         <table class="table table-striped">
           <thead>
             <tr style="text-align:center;">
-              <th>Last Name</th>
-              <th>First Name</th>
-              <th>Year</th>
-              <th>Title</th>
-              <th>Place</th>
-              <th>Publisher</th>
+              <th>Bad_Idea1</th>
+              <th>Genre</th>
             </tr>
           </thead>
           <tbody>
             {{#each list}}
             <tr style="text-align:center;">
-              <td>{{this.lastName}},</td>
-              <td>{{this.firstName}}</td>
-              <td>{{this.year}},</td>
-              <td><i>{{this.title}},</i></td>
-              <td>{{this.place}},</td>
-              <td>{{this.publisher}}.</td>
+              <td>{{this.Bad_Idea1}}</td>
+              <td>{{this.Genre}}</td>
               <td>
                 <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
                 <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
@@ -115,46 +107,10 @@ crossorigin="anonymous">
           </tbody>
         </table>
       </div>
-      <div class="top">
-        <br><h3>ACS Format</h3><br>
-      </div>
-        <div style="margin:auto;">
-          <table class="table table-striped">
-            <thead>
-              <tr style="text-align:center;">
-                <th>Last Name</th>
-                <th>First Name</th>
-                <th>Title</th>
-                <th>Publisher</th>
-                <th>Year</th>
-                <th>Volume</th>
-                <th>Issue</th>
-                <th>Pages</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each list}}
-              <tr style="text-align:center;">
-                <td>{{this.lastName}},</td>
-                <td>{{this.firstName}}.</td>
-                <td>"{{this.title}}".</td>
-                <td><i>{{this.publisher}}</i>,</td>
-                <td><b>{{this.year}}</b>,</td>
-                <td><i>{{this.volume}}</i></td>
-                <td>({{this.issue}}),</td>
-                <td>{{this.pages}}.</td>
-                <td>
-                  <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-                  <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-                </td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </div>
         <hr>
         <div class="top">
         <br>
+        <a><h4> Submit a new idea! </h4><a>
         <a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Create New</a>
         <br><br>
         </div>
